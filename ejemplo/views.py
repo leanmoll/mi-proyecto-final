@@ -5,7 +5,9 @@ def index(request):
     return render(request, "ejemplo/saludar.html", {"nombre":"Leandro"})
 
 def imc (request, peso, altura):
-    imc = 1 
+    a = int(peso)
+    b= int(altura)
+    imc = (a/(b**2))*10000
     return render(request, "ejemplo/imc.html", {"imc": imc})
 
 def monstrar_familiares(request):
